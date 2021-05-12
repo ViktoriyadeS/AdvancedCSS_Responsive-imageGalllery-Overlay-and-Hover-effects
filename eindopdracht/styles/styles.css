@@ -1,0 +1,219 @@
+@charset "UTF-8";
+aside {
+  position: fixed;
+  bottom: 40px;
+  right: 0px;
+}
+aside a {
+  display: block;
+  padding: 20px;
+}
+aside a.blog {
+  background-color: #e17b77;
+  color: #fff;
+}
+aside a.blog .fa-laptop:before {
+  content: "";
+  padding-right: 20px;
+  font-size: 20px;
+}
+aside a.twitter {
+  background-color: #00aced;
+  color: #fff;
+}
+aside a.twitter .fa-twitter::before {
+  content: "";
+  padding-right: 20px;
+  font-size: 20px;
+}
+aside a.linkedin {
+  background-color: #007bb6;
+  color: #fff;
+}
+aside a.linkedin .fa-linkedin-in::before {
+  content: "";
+  padding-right: 20px;
+  font-size: 20px;
+}
+aside a.facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+aside a.facebook .fa-facebook-f::before {
+  content: "";
+  padding-right: 25px;
+  font-size: 20px;
+}
+aside a.github {
+  background-color: #333;
+  color: #fff;
+}
+aside a.github .fa-github::before {
+  content: "";
+  padding-right: 20px;
+  font-size: 20px;
+}
+aside a:not(:hover) {
+  transform: translateX(175px);
+  transition: transform 0.5s ease-in-out;
+}
+
+html, body {
+  background-color: #c3cfe2;
+}
+
+section {
+  position: relative;
+  max-width: 350px;
+  height: 100%;
+}
+section .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #2d2c3f;
+  border-radius: 10px;
+}
+section .overlay button {
+  position: absolute;
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section .card {
+  display: block;
+  max-width: 350px;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+section .card-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+section .card-top p {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #504e4e;
+  margin-bottom: 40px;
+}
+section .card-bottom {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #686de0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+section .card-bottom img {
+  width: 130px;
+  height: 136.5px;
+  border: 5px solid white;
+  border-radius: 100px;
+  margin: 30px;
+  transform: translateY(-260px);
+}
+section .card-bottom h1 {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  line-height: 1.5em;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  transform: translateY(70px);
+  opacity: 1;
+}
+section .card-bottom p {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #a9abe9;
+  margin-top: 0px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  transform: translateY(50px);
+  opacity: 1;
+}
+section:hover .overlay {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+section:hover .card {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 40px;
+    grid-gap: 10px;
+  }
+  .gallery > .image.img1 {
+    grid-area: 2/2/3/3;
+  }
+  .gallery > .image.img2 {
+    grid-area: 2/3/3/4;
+  }
+  .gallery > .image.img3 {
+    grid-area: 3/2/4/3;
+  }
+  .gallery > .image.img4 {
+    grid-area: 3/3/4/4;
+  }
+  .gallery > .image.img5 {
+    grid-area: 4/2/5/3;
+  }
+  .gallery > .image.img6 {
+    grid-area: 4/3/5/4;
+  }
+  .gallery > .image.img7 {
+    grid-area: 5/2/6/3;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 40px repeat(3, 1fr) 40px;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .gallery > .image.img1 {
+    grid-area: 1/2/2/3;
+  }
+  .gallery > .image.img2 {
+    grid-area: 1/3/2/4;
+  }
+  .gallery > .image.img3 {
+    grid-area: 1/4/2/5;
+  }
+  .gallery > .image.img4 {
+    grid-area: 2/2/3/3;
+  }
+  .gallery > .image.img5 {
+    grid-area: 2/3/3/4;
+  }
+  .gallery > .image.img6 {
+    grid-area: 2/4/3/5;
+  }
+  .gallery > .image.img7 {
+    grid-area: 3/2/4/3;
+  }
+}/*# sourceMappingURL=styles.css.map */

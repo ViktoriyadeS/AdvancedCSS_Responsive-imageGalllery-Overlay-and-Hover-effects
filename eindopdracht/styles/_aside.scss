@@ -1,0 +1,58 @@
+aside{
+    position: fixed;
+    bottom: 40px;
+    right: 0px;
+    a{
+        display: block;
+        padding: 20px;
+        &.blog{
+            background-color: $blog;
+            color: $card-top;
+            .fa-laptop:before{
+                content: "\f109";
+                padding-right: 20px;
+                font-size: 20px;
+            }
+        }
+        &.twitter{
+            background-color: $twitter;
+            color: $card-top;
+            .fa-twitter::before {
+                content: "\f099";
+                padding-right: 20px;
+                font-size: 20px;
+            }
+        }
+        &.linkedin{
+            background-color: $linkedin;
+            color: $card-top;
+            .fa-linkedin-in::before {
+                content: "\f0e1";
+                padding-right: 20px;
+                font-size: 20px;
+            }
+        }
+        &.facebook{
+            background-color: $facebook;
+            color: $card-top;
+            .fa-facebook-f::before {
+                content: "\f39e";
+                padding-right: 25px;
+                font-size: 20px;
+            }
+        }
+        &.github{
+            background-color: $github;
+            color: $card-top;
+            .fa-github::before {
+                content: "\f09b";
+                padding-right: 20px;
+                font-size: 20px;
+            }
+        }
+    }
+    a:not(:hover){
+        transform: translateX(175px);
+        transition: transform .5s ease-in-out;
+    }
+}
